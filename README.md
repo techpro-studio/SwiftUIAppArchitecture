@@ -25,11 +25,9 @@ App has shared [Container](https://github.com/Swinject/Swinject/blob/master/Docu
 ```
 
 ### ViewModel
-  It contains a logic of the presentation. It has the bindings for input and output.
-  The biggest problem here that ObservableObject has Self requirement and can't be used as an Abstraction like a protocol and even as 
-  an abstract class. If you try to use ConcreteViewModel as a child of a base abstract ViewModel class with properties and abstract methods, 
-  then @Published properties  will not update view. And this is a huge fail for flexibility,
-   because we can't use viewModel as an abstraction.
+  It contains the logic of the presentation. It has the bindings for input and output.
+  The biggest problem here is that ObservableObject has Self requirement and can't be used as an Abstraction like a protocol and even as an abstract class. If you try to use ConcreteViewModel as a child of a base abstract ViewModel class with properties and abstract methods, 
+  then @Published properties will not update the view. And this is a huge fail for flexibility because we can't use viewModel as an abstraction.
  
  ```swift
  
