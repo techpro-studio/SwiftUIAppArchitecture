@@ -1,4 +1,8 @@
 name: SwiftUIAppArchitecture
+packages:
+  Swinject:
+    url: https://github.com/Swinject/Swinject
+    from: 2.7.1
 targets:
   AppArchitecture:
     type: application
