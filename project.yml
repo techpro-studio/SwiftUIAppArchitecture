@@ -1,0 +1,17 @@
+name: SwiftUIAppArchitecture
+targets:
+  AppArchitecture:
+    type: application
+    platform: iOS
+    deploymentTarget: "13.0"
+    sources: [SwiftUIAppArchitecture]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: studio.techpro.example.swiftui
+      configs:
+        Debug:
+          debug
+        Release:
+          release
+    dependencies:
+      - package: Swinject
