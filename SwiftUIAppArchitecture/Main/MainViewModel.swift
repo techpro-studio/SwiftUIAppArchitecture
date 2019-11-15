@@ -9,7 +9,6 @@
 import Foundation
 
 
-
 class MainViewModel : BagContainer, ObservableObject {
 
     private let reachabillityManager:  ReachabilityManager
