@@ -1,4 +1,4 @@
-# iOSAppArchitecture
+# SwiftUIAppArchitecture
 
 SwiftUI app architecture we use.
 
