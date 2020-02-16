@@ -16,7 +16,7 @@ protocol DetailViewFactory {
 
 
 
-class DefaultDetailViewFactory : BaseFactory, DetailViewFactory {
+struct DefaultDetailViewFactory : DetailViewFactory {
     func make(value: String) -> AnyView {
         let viewModel = DetailViewModel()
         viewModel.setValue(value: value)

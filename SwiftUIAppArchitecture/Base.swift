@@ -11,13 +11,6 @@ import Swinject
 import Combine
 
 
-class BaseFactory {
-    unowned let container: Container
-
-    init(container: Container) {
-        self.container = container
-    }
-}
 
 class BagContainer {
     var cancellableBag: Set<AnyCancellable> = Set()

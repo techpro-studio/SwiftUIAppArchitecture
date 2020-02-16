@@ -15,11 +15,13 @@ protocol MainViewFactory {
 
 
 
-class DefaultMainViewFactory : BaseFactory, MainViewFactory {
+struct DefaultMainViewFactory : MainViewFactory {
+
+    let reachabilityManager: ReachabilityManager
+    let detailViewFactory: DetailViewFactory
+
     func make() -> AnyView {
-        let viewModel = MainViewModel(
-            reachabillityManager: container.resolve(ReachabilityManager.self)!
-        )
-        return AnyView(MainView(viewModel: viewModel, detailViewFactory: container.resolve(DetailViewFactory.self)!))
+        let viewModel = MainViewModel(reachabillityManager: reachabilityManager)
+        return AnyView(MainView(viewModel: viewModel, detailViewFactory: detailViewFactory))
     }
 }

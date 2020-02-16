@@ -17,11 +17,14 @@ func BuildDependencies(container: Container) -> Container {
     }
 
     container.register(MainViewFactory.self) { resolver -> MainViewFactory in
-        DefaultMainViewFactory(container: resolver as! Container)
+        DefaultMainViewFactory(
+            reachabilityManager: container.resolve(ReachabilityManager.self)!,
+            detailViewFactory: container.resolve(DetailViewFactory.self)!
+        )
     }
 
     container.register(DetailViewFactory.self) { resolver -> DetailViewFactory in
-        DefaultDetailViewFactory(container: resolver as! Container)
+        DefaultDetailViewFactory()
     }
 
     return container
